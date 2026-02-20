@@ -1,33 +1,73 @@
 {
     "logo": {
         "url": "/images/logo-white.svg",
-        "altText": "Logo light",
+        "altText": "Zukosuite",
         "type": "ImageBlock"
     },
-    "text": "A description of your brand",
+    "text": "The AI-powered business suite for freelancers, entrepreneurs, and consultants. Work smarter, grow faster.",
     "primaryLinks": {
-        "title": "Product",
+        "title": "Products",
         "links": [
             {
-                "label": "Features",
-                "altText": "Features page",
-                "url": "/",
+                "label": "Accounting AI",
+                "altText": "AI-powered accounting",
+                "url": "#",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Pricing",
-                "url": "/pricing",
+                "label": "Smart CRM",
+                "url": "#",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Documentation",
-                "url": "/",
+                "label": "Project AI",
+                "url": "#",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Unified Inbox",
+                "url": "#",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Communications",
+                "url": "#",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Learning Portal",
+                "url": "#",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Community",
+                "url": "#",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Marketing AI",
+                "url": "#",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
@@ -40,8 +80,17 @@
         "title": "Company",
         "links": [
             {
+                "label": "About Us",
+                "altText": "About Zukosuite",
+                "url": "#",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
                 "label": "Careers",
-                "altText": "careers page",
+                "altText": "Careers at Zukosuite",
                 "url": "/careers",
                 "icon": "arrowRight",
                 "iconPosition": "right",
@@ -55,55 +104,71 @@
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
+            },
+            {
+                "label": "Pricing",
+                "url": "/pricing",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
             }
         ],
         "type": "FooterLinksGroup"
     },
     "socialLinks": [
         {
-            "altText": "GitHub link",
-            "url": "https://github.com/netlify",
+            "altText": "GitHub",
+            "url": "https://github.com",
             "icon": "github",
             "type": "Social"
         },
         {
-            "altText": "Twitter link",
-            "url": "https://twitter.com/netlify",
+            "altText": "Twitter",
+            "url": "https://twitter.com",
             "icon": "twitter",
             "type": "Social"
         },
         {
-            "altText": "LinkedIn link",
-            "url": "https://www.linkedin.com/company/netlify",
+            "altText": "LinkedIn",
+            "url": "https://linkedin.com",
             "icon": "linkedin",
             "type": "Social"
         },
         {
-            "altText": "Email link",
-            "url": "/",
+            "altText": "Email us",
+            "url": "mailto:hello@zukosuite.com",
             "icon": "mail",
             "type": "Social"
         }
     ],
     "legalLinks": [
         {
-            "label": "Terms",
-            "url": "/",
+            "label": "Terms of Service",
+            "url": "#",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
             "type": "Link"
         },
         {
-            "label": "Privacy",
-            "url": "/",
+            "label": "Privacy Policy",
+            "url": "#",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "Cookie Policy",
+            "url": "#",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
             "type": "Link"
         }
     ],
-    "copyrightText": "Powered by [Netlify](https://www.netlify.com/)\n",
+    "copyrightText": "\u00a9 2026 Zukosuite. All rights reserved.",
     "colors": "bg-dark-fg-light",
     "type": "Footer"
 }

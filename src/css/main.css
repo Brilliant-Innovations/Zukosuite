@@ -1,327 +1,533 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Slab:wght@400;500;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    body {
-        @apply text-base;
-    }
-    h1,
-    .h1,
-    h2,
-    .h2,
-    h3,
-    .h3,
-    h4,
-    .h4,
-    h5,
-    h6 {
-        @apply break-words;
-        line-height: 1.2;
-    }
+/* ============================================
+   ZUKOSUITE - NEO-BRUTALIST DARK
+   Unapologetically bold. Intentionally raw.
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Archivo:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Brutalist Palette */
+  --void: #050505;
+  --void-light: #0a0a0a;
+  --void-border: #1a1a1a;
+  
+  /* Aggressive Accents */
+  --acid: #39ff14;
+  --hot-pink: #ff006e;
+  --electric: #00d9ff;
+  --warning: #ffbe0b;
+  
+  /* Typography */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Archivo', system-ui, sans-serif;
 }
 
-@layer components {
-    .sb-markdown {
-        @apply leading-relaxed;
-        a {
-            @apply underline transition duration-200 ease-in;
-        }
-        a:hover {
-            @apply text-primary;
-        }
-        b,
-        strong {
-            @apply font-bold;
-        }
-        em {
-            @apply italic;
-        }
-        * + * {
-            margin-top: 1.5em;
-        }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin-top: 3.5rem;
-            &:first-child {
-                margin-top: 0;
-            }
-        }
-        h1+h2,
-        h2+h3,
-        h3+h4,
-        h4+h5,
-        h5+h6 {
-            margin-top: 1.5rem;
-        }
-        ol {
-            @apply list-decimal;
-            padding-left: 1.25em;
-        }
-        ul {
-            @apply list-disc;
-            padding-left: 1.25em;
-        }
-        li > ul,
-        li > ol {
-            margin: 0;
-        }
-        li + li {
-            margin-top: 0.5rem;
-        }
-        blockquote {
-            @apply border-l-4 border-current;
-            font-size: 1.25em;
-            line-height: 1.4;
-            padding-left: 1.25em;
-            &:not(:first-child) {
-                margin-top: 2.5rem;
-            }
-            &:not(:last-child) {
-                margin-bottom: 2.5rem;
-            }
-        }
-        pre {
-            @apply border border-current overflow-x-auto leading-normal;
-            padding: 1.25em;
-        }
-        hr {
-            @apply bg-current border-0 h-px;
-            &:not(:first-child) {
-                margin-top: 2.5rem;
-            }
-            &:not(:last-child) {
-                margin-bottom: 2.5rem;
-            }
-        }
-        figcaption {
-            @apply leading-normal;
-            font-size: 0.875em;
-            margin: 0.5rem 0 0;
-        }
-        table {
-            @apply border border-current border-collapse text-left w-full;
-        }
-        caption {
-            @apply text-left;
-            font-size: 0.875em;
-            margin: 0 0 0.5rem;
-        }
-        th,
-        td {
-            @apply border-r border-b border-current;
-            padding: 0.5em;
-        }
-        th {
-            font-weight: bold;
-        }
-    }
-
-    /* Buttons */
-    .sb-component-button {
-        @apply inline-flex justify-center items-center text-center border transition duration-200 ease-in hover:-translate-y-1;
-    }
-
-    /* Links */
-    .sb-component-link {
-        @apply inline-flex justify-center items-center text-center transition duration-200 ease-linear;
-    }
-    .sb-component-link-primary {
-        @apply text-primary hover:underline;
-    }
-    .sb-component-link-secondary {
-        @apply text-current hover:text-primary;
-    }
-
-    /* Form controls */
-    option {
-        color: initial;
-    }
-    .sb-checkbox:checked + .sb-label:before {
-        content: '\2713';
-    }
-
-    /* Image gallery */
-    .sb-image-strip-track {
-        min-width: 160rem;
-    }
-    .sb-image-strip-content {
-        min-width: 80rem;
-    }
-
-    /* Carousel */
-    .sb-carousel-dot {
-        @apply w-4 h-4 cursor-pointer;
-    }
-
-    .sb-carousel-tab-title {
-        @apply cursor-pointer opacity-40 max-w-xs;
-        display: -webkit-box;
-        line-height: 1.5;
-        max-height: 1.5em;
-        overflow-y: hidden;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-    }
-    .sb-carousel-tab-title-active {
-        @apply opacity-100;
-    }
-
-    /* Color palettes */
-    .bg-light-fg-dark,
-    .sb-card.bg-light-fg-dark {
-        @apply text-dark bg-light;
-        .sb-input,
-        .sb-select,
-        .sb-textarea {
-            @apply placeholder-dark/50;
-        }
-        .sb-component-button-primary {
-            @apply bg-primary border-primary text-light;
-        }
-        .sb-component-button-secondary {
-            @apply border-dark text-dark;
-        }
-        .sb-image-strip-wrap {
-            &:before,
-            &:after {
-                @apply from-transparent to-light;
-            }
-        }
-        .sb-divider,
-        .sb-footer-bottom {
-            @apply border-neutral;
-        }
-        .sb-carousel-prev,
-        .sb-carousel-next {
-            @apply bg-dark text-light;
-        }
-        .sb-carousel-dot {
-            @apply bg-dark/20;
-        }
-        .sb-carousel-dot-active {
-            @apply bg-dark;
-        }
-    }
-    .bg-neutral-fg-dark,
-    .sb-card.bg-neutral-fg-dark {
-        @apply text-dark bg-neutral;
-        .sb-input,
-        .sb-select,
-        .sb-textarea {
-            @apply placeholder-dark/50;
-        }
-        .sb-component-button-primary {
-            @apply bg-primary border-primary text-light;
-        }
-        .sb-component-button-secondary {
-            @apply border-dark text-dark;
-        }
-        .sb-image-strip-wrap {
-            &:before,
-            &:after {
-                @apply from-transparent to-neutral;
-            }
-        }
-        .sb-divider,
-        .sb-footer-bottom {
-            @apply border-neutralAlt;
-        }
-        .sb-carousel-prev,
-        .sb-carousel-next {
-            @apply bg-dark text-light;
-        }
-        .sb-carousel-dot {
-            @apply bg-dark/20;
-        }
-        .sb-carousel-dot-active {
-            @apply bg-dark;
-        }
-    }
-    .bg-dark-fg-light,
-    .sb-card.bg-dark-fg-light {
-        @apply text-light bg-dark;
-        .sb-input,
-        .sb-select,
-        .sb-textarea {
-            @apply placeholder-light/50;
-        }
-        .sb-component-button-primary {
-            @apply bg-primary border-primary text-light;
-        }
-        .sb-component-button-secondary {
-            @apply border-light text-light;
-        }
-        .sb-image-strip-wrap {
-            &:before,
-            &:after {
-                @apply from-transparent to-dark;
-            }
-        }
-        .sb-divider,
-        .sb-footer-bottom {
-            @apply border-light/20;
-        }
-        .sb-carousel-prev,
-        .sb-carousel-next {
-            @apply bg-light text-dark;
-        }
-        .sb-carousel-dot {
-            @apply bg-light/20;
-        }
-        .sb-carousel-dot-active {
-            @apply bg-light;
-        }
-    }
-    /* Only for cards */
-    .bg-neutralAlt-fg-dark {
-        @apply text-dark bg-neutralAlt;
-        .sb-component-button-primary {
-            @apply bg-primary border-primary text-light;
-        }
-        .sb-component-button-secondary {
-            @apply border-dark text-dark;
-        }
-    }
+/* Base Reset */
+* {
+  box-sizing: border-box;
 }
 
-@layer utilities {
-    .underline-line-through {
-        text-decoration-line: underline line-through
-    }
-    .sb-animate-slide-left {
-        animation-name: slideLeft;
-        animation-duration: var(--sb-slide-speed, 80s);
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
-    @keyframes slideLeft {
-        from {
-            transform: translate3d(0,0,0)
-        }
-        to {
-            transform: translate3d(-50%,0,0)
-        }
-    }
-    .sb-animate-slide-right {
-        animation-name: slideRight;
-        animation-duration: var(--sb-slide-speed, 80s);
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
-    @keyframes slideRight {
-        from {
-            transform: translate3d(-50%,0,0)
-        }
-        to {
-            transform: translate3d(0,0,0)
-        }
-    }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--void);
+  color: white;
+  line-height: 1.1;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--acid);
+  color: var(--void);
+}
+
+/* ============================================
+   TYPOGRAPHY - AGGRESSIVE & OVERSIZED
+   ============================================ */
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.text-mega {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 15vw, 12rem);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+}
+
+.text-huge {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.9;
+}
+
+.text-acid {
+  color: var(--acid);
+}
+
+.text-pink {
+  color: var(--hot-pink);
+}
+
+.text-electric {
+  color: var(--electric);
+}
+
+/* ============================================
+   COLOR CLASSES - BRUTALIST
+   ============================================ */
+
+.bg-light-fg-dark {
+  background: var(--void-light);
+  color: white;
+}
+
+.bg-primary-fg-light {
+  background: var(--acid);
+  color: var(--void);
+  position: relative;
+}
+
+.bg-primary-fg-light::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(0,0,0,0.1) 10px,
+    rgba(0,0,0,0.1) 20px
+  );
+}
+
+.bg-neutral-fg-dark {
+  background: var(--void);
+  color: white;
+}
+
+.bg-neutralAlt-fg-dark {
+  background: #111;
+  color: white;
+  border-top: 4px solid var(--void-border);
+  border-bottom: 4px solid var(--void-border);
+}
+
+.bg-dark-fg-light {
+  background: var(--void);
+  color: white;
+}
+
+/* ============================================
+   BRUTALIST BUTTONS
+   ============================================ */
+
+.btn-brutal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--acid);
+  color: var(--void);
+  border: 3px solid var(--void);
+  box-shadow: 6px 6px 0 var(--void);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-brutal:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0 var(--void);
+}
+
+.btn-brutal:active {
+  transform: translate(6px, 6px);
+  box-shadow: 0 0 0 var(--void);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--acid);
+  border: 3px solid var(--acid);
+  box-shadow: 6px 6px 0 var(--acid);
+}
+
+.btn-outline:hover {
+  box-shadow: 4px 4px 0 var(--acid);
+}
+
+.btn-pink {
+  background: var(--hot-pink);
+  border-color: var(--hot-pink);
+  color: white;
+  box-shadow: 6px 6px 0 rgba(255, 0, 110, 0.3);
+}
+
+.btn-pink:hover {
+  box-shadow: 4px 4px 0 rgba(255, 0, 110, 0.3);
+}
+
+/* ============================================
+   CARDS - BRUTALIST
+   ============================================ */
+
+.card-brutal {
+  background: var(--void-light);
+  border: 3px solid var(--void-border);
+  padding: 2rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.card-brutal::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 2rem;
+  width: 4rem;
+  height: 3px;
+  background: var(--acid);
+}
+
+.card-brutal:hover {
+  border-color: var(--acid);
+  transform: translateY(-4px);
+}
+
+.card-brutal:hover::before {
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   SECTIONS & LAYOUT
+   ============================================ */
+
+section {
+  position: relative;
+}
+
+.section-border {
+  border-top: 1px solid var(--void-border);
+}
+
+/* Diagonal clip */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* Grid pattern overlay */
+.grid-overlay {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.animate-glitch:hover {
+  animation: glitch 0.2s ease infinite;
+}
+
+/* ============================================
+   DECORATIVE ELEMENTS
+   ============================================ */
+
+.acid-line {
+  height: 4px;
+  background: var(--acid);
+}
+
+.pink-line {
+  height: 4px;
+  background: var(--hot-pink);
+}
+
+.corner-bracket {
+  position: relative;
+}
+
+.corner-bracket::before,
+.corner-bracket::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--acid);
+}
+
+.corner-bracket::before {
+  top: -10px;
+  left: -10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.corner-bracket::after {
+  bottom: -10px;
+  right: -10px;
+  border-left: none;
+  border-top: none;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--hot-pink);
+  color: white;
+  transform: rotate(-2deg);
+}
+
+/* ============================================
+   MARQUEE BAR
+   ============================================ */
+
+.marquee-bar {
+  background: var(--acid);
+  color: var(--void);
+  padding: 0.75rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 15s linear infinite;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.marquee-content span {
+  padding: 0 2rem;
+}
+
+/* ============================================
+   UTILITY
+   ============================================ */
+
+.text-stroke {
+  -webkit-text-stroke: 2px var(--acid);
+  color: transparent;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+  color: transparent;
+}
+
+.noise {
+  position: relative;
+}
+
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--void-border);
+  border: 2px solid var(--void);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--acid);
+}
+
+/* ============================================
+   STATS SECTION - NUMBERS AS FOCAL POINT
+   ============================================ */
+
+/* Stat card container */
+.stat-card {
+  background: var(--void-light);
+  border: 3px solid var(--void-border);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--acid);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--acid);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* The massive stat number */
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 15vw, 12rem);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  color: var(--acid);
+  text-shadow: 4px 4px 0 var(--void);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Stat subtitle (e.g., "Active Users") */
+.stat-subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Stat description text */
+.stat-text {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.75rem;
+}
+
+/* Stats grid layout enhancement */
+.stat-card .sb-markdown {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Pink accent variant for alternating stats */
+.stat-card:nth-child(2) .stat-number {
+  color: var(--hot-pink);
+}
+
+.stat-card:nth-child(2)::before {
+  background: var(--hot-pink);
+}
+
+.stat-card:nth-child(2):hover {
+  border-color: var(--hot-pink);
+}
+
+/* Electric accent for third stat */
+.stat-card:nth-child(3) .stat-number {
+  color: var(--electric);
+}
+
+.stat-card:nth-child(3)::before {
+  background: var(--electric);
+}
+
+.stat-card:nth-child(3):hover {
+  border-color: var(--electric);
+}
+
+/* ============================================
+   HEADER LOGO SIZING - FORCE
+   ============================================ */
+
+/* Force logo size with !important */
+header img[src*="zuko-logo"],
+header img[src*="logo"],
+.sb-component-header img,
+[class*="Header"] img,
+[class*="header"] img {
+  max-height: 45px !important;
+  max-width: 160px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Target logo by alt text */
+img[alt="Zukosuite"] {
+  max-height: 45px !important;
+  max-width: 160px !important;
 }

@@ -1,0 +1,69 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0a0a0a"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  
+  <!-- Main dashboard frame -->
+  <rect x="50" y="50" width="700" height="500" rx="8" fill="#111" stroke="#333" stroke-width="2"/>
+  
+  <!-- Header bar -->
+  <rect x="50" y="50" width="700" height="60" rx="8" fill="#1a1a1a"/>
+  <rect x="70" y="70" width="120" height="20" rx="4" fill="#39ff14"/>
+  
+  <!-- Sidebar -->
+  <rect x="50" y="110" width="180" height="440" fill="#0d0d0d"/>
+  <rect x="70" y="140" width="140" height="8" rx="2" fill="#333"/>
+  <rect x="70" y="160" width="100" height="8" rx="2" fill="#555"/>
+  <rect x="70" y="200" width="140" height="8" rx="2" fill="#ff006e"/>
+  <rect x="70" y="220" width="120" height="8" rx="2" fill="#333"/>
+  <rect x="70" y="240" width="130" height="8" rx="2" fill="#333"/>
+  
+  <!-- Main content area - Stats cards -->
+  <rect x="260" y="140" width="150" height="100" rx="6" fill="#1a1a1a" stroke="#333"/>
+  <text x="280" y="180" font-family="Bebas Neue, sans-serif" font-size="36" fill="#39ff14">50K+</text>
+  <text x="280" y="210" font-family="Archivo, sans-serif" font-size="12" fill="#888">ACTIVE USERS</text>
+  
+  <rect x="430" y="140" width="150" height="100" rx="6" fill="#1a1a1a" stroke="#333"/>
+  <text x="450" y="180" font-family="Bebas Neue, sans-serif" font-size="36" fill="#ff006e">10M+</text>
+  <text x="450" y="210" font-family="Archivo, sans-serif" font-size="12" fill="#888">AI ACTIONS</text>
+  
+  <rect x="600" y="140" width="130" height="100" rx="6" fill="#1a1a1a" stroke="#333"/>
+  <text x="620" y="180" font-family="Bebas Neue, sans-serif" font-size="36" fill="#00d9ff">40%</text>
+  <text x="620" y="210" font-family="Archivo, sans-serif" font-size="12" fill="#888">TIME SAVED</text>
+  
+  <!-- Chart area -->
+  <rect x="260" y="260" width="470" height="200" rx="6" fill="#0d0d0d" stroke="#333"/>
+  
+  <!-- Chart bars -->
+  <rect x="290" y="380" width="40" height="60" fill="#39ff14" opacity="0.8"/>
+  <rect x="350" y="340" width="40" height="100" fill="#39ff14" opacity="0.9"/>
+  <rect x="410" y="300" width="40" height="140" fill="#ff006e"/>
+  <rect x="470" y="360" width="40" height="80" fill="#39ff14" opacity="0.7"/>
+  <rect x="530" y="320" width="40" height="120" fill="#00d9ff" opacity="0.8"/>
+  <rect x="590" y="280" width="40" height="160" fill="#39ff14"/>
+  <rect x="650" y="350" width="40" height="90" fill="#ff006e" opacity="0.8"/>
+  
+  <!-- Glowing accent line -->
+  <line x1="260" y1="480" x2="730" y2="480" stroke="#39ff14" stroke-width="2"/>
+  <circle cx="730" cy="480" r="6" fill="#39ff14"/>
+  
+  <!-- Bottom toolbar -->
+  <rect x="260" y="490" width="470" height="40" rx="4" fill="#1a1a1a"/>
+  <rect x="280" y="505" width="80" height="10" rx="2" fill="#333"/>
+  <rect x="380" y="505" width="60" height="10" rx="2" fill="#555"/>
+  
+  <!-- AI indicator -->
+  <circle cx="700" cy="520" r="15" fill="#39ff14"/>
+  <text x="695" y="525" font-family="Archivo, sans-serif" font-size="10" fill="#000" font-weight="bold">AI</text>
+  
+  <!-- Decorative corner brackets -->
+  <path d="M 50 110 L 50 90 L 70 90" fill="none" stroke="#39ff14" stroke-width="2"/>
+  <path d="M 750 110 L 750 90 L 730 90" fill="none" stroke="#39ff14" stroke-width="2"/>
+</svg>

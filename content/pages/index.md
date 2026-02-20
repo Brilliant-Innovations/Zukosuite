@@ -1,76 +1,77 @@
 ---
-title: Home
+title: Zukosuite - AI-Powered Business Suite for Modern Professionals
 slug: /
 sections:
+  # Hero Section
   - type: GenericSection
     title:
-      text: Unblock your team boost your time to production
+      text: Your Business, Supercharged by AI
       color: text-dark
       type: TitleBlock
-    subtitle: Subtitle goes here
+    subtitle: The complete suite for freelancers, entrepreneurs, and consultants
     text: >
-      A Netlify Create website is a git repo that you own. Every code commit is
-      instantly reflected in the visual editor and since every visual edit is a
-      git commit, git workflows and collaboration just work.
+      Zukosuite brings together accounting, CRM, project management, communications, 
+      and more—all enhanced with intelligent AI that automates your work, 
+      provides insights, and helps you make better decisions faster.
     actions:
-      - label: Get started
-        altText: ''
-        url: /
-        showIcon: false
-        icon: arrowRight
-        iconPosition: right
-        style: secondary
-        elementId: ''
-        type: Button
-      - label: See Tutorials
-        altText: ''
-        url: /
+      - label: Start Free Trial
+        altText: 'Start your free trial'
+        url: '#signup'
         showIcon: true
         icon: arrowRight
         iconPosition: right
         style: primary
         elementId: ''
+        type: Button
+      - label: See AI in Action
+        altText: 'Watch AI features demo'
+        url: '#demo'
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        elementId: ''
         type: Link
     media:
-      url: /images/main-hero.svg
-      altText: Unblock your team boost your time to production preview
+      url: /images/hero-main.svg
+      altText: Zukosuite AI-powered business dashboard preview
       elementId: ''
       type: ImageBlock
     badge:
-      label: This is a badge
+      label: ✨ Now with GPT-4 Powered Intelligence
       color: text-primary
       type: Badge
-    elementId: ''
+    elementId: 'hero'
     colors: bg-light-fg-dark
     styles:
       self:
         alignItems: center
         flexDirection: row
         padding:
-          - pt-16
+          - pt-20
           - pl-16
-          - pb-16
+          - pb-20
           - pr-16
+
+  # Stats Section
   - type: FeaturedItemsSection
     title:
-      text: Key Benefits
+      text: Trusted by Growing Businesses
       color: text-dark
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Subtitle goes here
+    subtitle: Join thousands of professionals who've transformed their workflow
     items:
       - type: FeaturedItem
-        title: 500k
-        subtitle: Numbers Done
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+        title: 50K+
+        subtitle: Active Users
+        text: >
+          Freelancers, consultants, and entrepreneurs trust Zukosuite to power their business operations daily.
         actions: []
         elementId: null
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-primary-fg-light
         styles:
           self:
             padding:
@@ -79,30 +80,28 @@ sections:
               - pb-8
               - pr-8
             borderRadius: x-large
-            flexDirection: row
+            flexDirection: col
             justifyContent: center
-            textAlign: left
+            textAlign: center
         image:
           type: ImageBlock
-          altText: Lightning bolt symbol on red background
+          altText: Users icon
           elementId: ''
           url: /images/icon1.svg
           styles:
             self:
               borderRadius: x-large
-      - title: 20x
-        subtitle: The Job Stuff
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+      - title: 10M+
+        subtitle: AI Actions Automated
+        text: >
+          Smart automations handle invoices, emails, scheduling, and data entry—saving countless hours every month.
         image:
           url: /images/icon2.svg
-          altText: Featured icon two
+          altText: AI automation icon
           elementId: ''
           type: ImageBlock
         actions: []
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-primary-fg-light
         styles:
           self:
             padding:
@@ -111,23 +110,21 @@ sections:
               - pb-8
               - pr-8
             borderRadius: x-large
-            flexDirection: row
-            textAlign: left
+            flexDirection: col
+            textAlign: center
             justifyContent: center
         type: FeaturedItem
-      - title: 200%
-        subtitle: Faster
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+      - title: 40%
+        subtitle: Time Saved Weekly
+        text: >
+          Users report significant productivity gains through AI-powered task automation and intelligent insights.
         image:
           url: /images/icon3.svg
-          altText: Featured icon three
+          altText: Time saved icon
           elementId: ''
           type: ImageBlock
         actions: []
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-primary-fg-light
         styles:
           self:
             padding:
@@ -136,169 +133,267 @@ sections:
               - pb-8
               - pr-8
             borderRadius: x-large
-            flexDirection: row
+            flexDirection: col
+            textAlign: center
         type: FeaturedItem
-    actions:
-      - label: Get started
-        altText: ''
-        url: /
-        showIcon: false
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        elementId: ''
-        type: Button
-    badge:
-      label: This is a badge
-      color: text-primary
-      styles:
-        self:
-          textAlign: center
-      type: Badge
-    elementId: ''
+    actions: []
+    badge: null
+    elementId: 'stats'
     variant: three-col-grid
     colors: bg-neutral-fg-dark
     styles:
       self:
         padding:
-          - pb-16
-          - pt-16
+          - pb-20
+          - pt-20
           - pl-16
           - pr-16
         justifyContent: center
       subtitle:
         textAlign: center
-  - subtitle: Award winning enterprises trust us
-    images:
-      - url: /images/empathy-logo.svg
-        altText: Empathy logo
-        type: ImageBlock
-      - url: /images/wellster-logo.svg
-        altText: Wellster logo
-        type: ImageBlock
-      - url: /images/vise-logo.svg
-        altText: Vise logo
-        type: ImageBlock
-      - url: /images/telus-logo.svg
-        altText: Telus logo
-        type: ImageBlock
-      - url: /images/contenful-logo.svg
-        altText: Contentful logo
-        type: ImageBlock
-      - url: /images/sanity-logo.svg
-        altText: Sanity logo
-        type: ImageBlock
-      - url: /images/rangle-logo.svg
-        altText: Rangle logo
-        type: ImageBlock
-    motion: move-to-left
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        justifyContent: center
-      subtitle:
-        textAlign: center
-    type: ImageGallerySection
-  - posts:
-      - content/pages/blog/case-study-1.md
-      - content/pages/blog/case-study-2.md
-      - content/pages/blog/case-study-3.md
-    showThumbnail: true
-    showDate: true
-    showAuthor: true
-    variant: three-col-grid
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-16
-          - pl-16
-          - pb-16
-          - pr-16
-        justifyContent: center
-    type: FeaturedPostsSection
-    hoverEffect: move-up
-  - title: Divider
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-7
-          - pl-7
-          - pb-7
-          - pr-7
-    type: DividerSection
-  - title:
-      text: Grow your business 10x faster
+
+  # Product Suite Overview
+  - type: FeaturedItemsSection
+    title:
+      text: 9 Powerful Apps, One Intelligent Platform
       color: text-dark
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: This is a subtitle
-    text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
-    media:
-      title: Title of the video
-      url: /images/placeholder-video.mp4
-      controls: false
-      aspectRatio: '16:9'
-      styles:
-        self:
-          padding:
-            - pt-2
-            - pb-2
-            - pl-2
-            - pr-2
-          borderColor: border-dark
-          borderStyle: solid
-          borderWidth: 1
-          borderRadius: large
-      type: VideoBlock
-      autoplay: true
-      loop: true
-      muted: true
+    subtitle: Everything you need to run and grow your business—connected and AI-enhanced
+    items:
+      - type: FeaturedItem
+        title: Accounting AI
+        tagline: Smart Finance
+        subtitle: Automated bookkeeping & insights
+        text: |
+          Let AI handle your invoicing, expense categorization, and financial reporting. 
+          Get predictive cash flow insights and tax optimization suggestions. 
+          Connect bank accounts for real-time reconciliation.
+        image:
+          url: /images/ai-brain.svg
+          altText: Accounting AI interface
+          styles:
+            self:
+              borderRadius: x-large
+          type: ImageBlock
+        colors: bg-light-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: col
+        actions:
+          - label: Learn more
+            url: '#accounting'
+            icon: arrowRight
+            iconPosition: right
+            style: secondary
+            type: Link
+      - type: FeaturedItem
+        title: Smart CRM
+        tagline: Relationship Intelligence
+        subtitle: AI-powered customer management
+        text: |
+          Track leads, automate follow-ups, and predict deal outcomes. 
+          The AI analyzes communication patterns to suggest the best 
+          time to reach out and identifies at-risk relationships.
+        image:
+          url: /images/hero-dashboard.svg
+          altText: Smart CRM interface
+          styles:
+            self:
+              borderRadius: x-large
+          type: ImageBlock
+        colors: bg-light-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: col
+        actions:
+          - label: Learn more
+            url: '#crm'
+            icon: arrowRight
+            iconPosition: right
+            style: secondary
+            type: Link
+      - type: FeaturedItem
+        title: Project AI
+        tagline: Intelligent Delivery
+        subtitle: Smart project management
+        text: |
+          AI estimates task durations, identifies bottlenecks before they happen, 
+          and suggests resource allocations. Natural language task creation 
+          and automated status reporting keep teams aligned.
+        image:
+          url: /images/ai-brain.svg
+          altText: Project AI interface
+          styles:
+            self:
+              borderRadius: x-large
+          type: ImageBlock
+        colors: bg-light-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: col
+        actions:
+          - label: Learn more
+            url: '#project'
+            icon: arrowRight
+            iconPosition: right
+            style: secondary
+            type: Link
+      - type: FeaturedItem
+        title: Unified Inbox
+        tagline: Centralized Communication
+        subtitle: All messages in one place
+        text: |
+          Email, social DMs, support tickets—unified in one intelligent inbox. 
+          AI prioritizes urgent messages, drafts contextual responses, 
+          and ensures nothing falls through the cracks.
+        image:
+          url: /images/hero-dashboard.svg
+          altText: Unified Inbox interface
+          styles:
+            self:
+              borderRadius: x-large
+          type: ImageBlock
+        colors: bg-light-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: col
+        actions:
+          - label: Learn more
+            url: '#inbox'
+            icon: arrowRight
+            iconPosition: right
+            style: secondary
+            type: Link
+      - type: FeaturedItem
+        title: Communications
+        tagline: AI-Enhanced Meetings
+        subtitle: Video, chat & collaboration
+        text: |
+          HD video conferencing with AI transcription, action item extraction, 
+          and smart summaries. Integrated team chat with contextual search 
+          and automated meeting scheduling.
+        image:
+          url: /images/ai-brain.svg
+          altText: Communications interface
+          styles:
+            self:
+              borderRadius: x-large
+          type: ImageBlock
+        colors: bg-light-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: col
+        actions:
+          - label: Learn more
+            url: '#communications'
+            icon: arrowRight
+            iconPosition: right
+            style: secondary
+            type: Link
+      - type: FeaturedItem
+        title: Learning Portal
+        tagline: AI Tutor
+        subtitle: Personalized skill development
+        text: |
+          Access courses that adapt to your learning style. AI creates 
+          custom study plans, quizzes you on weak areas, and suggests 
+          resources based on your career goals and industry trends.
+        image:
+          url: /images/hero-dashboard.svg
+          altText: Learning Portal interface
+          styles:
+            self:
+              borderRadius: x-large
+          type: ImageBlock
+        colors: bg-light-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: col
+        actions:
+          - label: Learn more
+            url: '#learning'
+            icon: arrowRight
+            iconPosition: right
+            style: secondary
+            type: Link
+    actions: []
     badge:
-      label: Key Benefits
+      label: Integrated Suite
       color: text-primary
       styles:
         self:
           textAlign: center
       type: Badge
+    elementId: 'products'
+    variant: three-col-grid
     colors: bg-light-fg-dark
     styles:
       self:
-        flexDirection: col
+        padding:
+          - pt-20
+          - pl-16
+          - pb-20
+          - pr-16
         justifyContent: center
       subtitle:
         textAlign: center
-    type: GenericSection
+
+  # AI Features Section
   - type: GenericSection
     title:
-      text: Generic section with a video
+      text: AI That Works For You
       color: text-dark
       styles:
         self:
-          textAlign: left
+          textAlign: center
       type: TitleBlock
-    subtitle: Section with a video subtitle
+    subtitle: Not just automation—intelligence that understands your business
     text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
-    actions: []
+      Every Zukosuite app is powered by advanced AI that learns your preferences, 
+      anticipates your needs, and takes action on your behalf. From drafting emails 
     media:
-      title: Title of the video
-      url: /images/placeholder-video.mp4
-      autoplay: true
-      loop: true
-      muted: true
-      controls: false
-      aspectRatio: '16:9'
+      url: /images/hero-dashboard.svg
+      altText: Zukosuite AI Dashboard
+      type: ImageBlock
       styles:
         self:
           padding:
@@ -306,82 +401,107 @@ sections:
             - pb-2
             - pl-2
             - pr-2
-          borderColor: border-dark
+          borderColor: border-primary
           borderStyle: solid
-          borderWidth: 1
-          borderRadius: large
-      type: VideoBlock
-    elementId: null
-    colors: bg-light-fg-dark
+          borderWidth: 2
+    badge:
+      label: AI Features
+      color: text-primary
+      styles:
+        self:
+          textAlign: center
+      type: Badge
+    colors: bg-neutral-fg-dark
     styles:
       self:
-        flexDirection: row
+        flexDirection: col
         justifyContent: center
+        padding:
+          - pt-20
+          - pb-20
+          - pl-16
+          - pr-16
       subtitle:
-        textAlign: left
-  - title:
-      text: Social Media Management
+        textAlign: center
+    elementId: 'ai-features'
+
+  # Marketing AI Section
+  - type: GenericSection
+    title:
+      text: Marketing AI
       color: text-dark
       type: TitleBlock
-    subtitle: Increase your reach
+    subtitle: Grow your audience on autopilot
     text: >
-      A service that helps businesses to manage their social media accounts and
-      posts.
+      AI-powered content generation, social media scheduling, and campaign optimization. 
+      The system analyzes what resonates with your audience and automatically creates 
+      and schedules posts, emails, and ads that convert. Track ROI across all channels 
+      from one unified dashboard.
     actions:
-      - label: Get started
-        url: /
-        icon: arrowRight
-        iconPosition: right
-        style: secondary
-        type: Button
-      - label: See Tutorials
-        url: /
-        showIcon: true
+      - label: Explore Marketing AI
+        url: '#marketing'
         icon: arrowRight
         iconPosition: right
         style: primary
+        type: Button
+      - label: See Examples
+        url: '#examples'
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
         type: Link
     media:
       url: /images/hero2.svg
-      altText: Fun feature preview
+      altText: Marketing AI dashboard
       type: ImageBlock
     badge:
-      label: This is a badge
+      label: Growth Engine
       color: text-primary
       type: Badge
     colors: bg-light-fg-dark
     styles:
       self:
         alignItems: center
-    type: GenericSection
-  - title:
-      text: Business Consulting
+        padding:
+          - pt-20
+          - pb-20
+          - pl-16
+          - pr-16
+    elementId: 'marketing'
+
+  # Community Section
+  - type: GenericSection
+    title:
+      text: Community & Micro-Widgets
       color: text-dark
       type: TitleBlock
-    subtitle: Be in good company
+    subtitle: Connect and customize
     text: >
-      A service that provides advice and guidance to startups and small
-      businesses.
+      Join a thriving community of entrepreneurs and freelancers. Share insights, 
+      find collaborators, and get support. Plus, access hundreds of micro-widgets—
+      small, powerful tools that integrate seamlessly: time trackers, calculators, 
+      form builders, appointment schedulers, and more.
     actions:
-      - label: Get started
-        url: /
-        icon: arrowRight
-        iconPosition: right
-        style: secondary
-        type: Button
-      - label: See Tutorials
-        url: /
-        showIcon: true
+      - label: Join Community
+        url: '#community'
         icon: arrowRight
         iconPosition: right
         style: primary
+        type: Button
+      - label: Browse Widgets
+        url: '#widgets'
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
         type: Link
     media:
       url: /images/hero3.svg
-      altText: Dope design preview
+      altText: Community and widgets showcase
       type: ImageBlock
     badge:
-      label: This is a badge
+      label: Connect & Extend
       color: text-primary
       type: Badge
     colors: bg-light-fg-dark
@@ -389,33 +509,28 @@ sections:
       self:
         alignItems: center
         flexDirection: row-reverse
-    type: GenericSection
-  - title: Divider
-    colors: bg-light-fg-dark
-    styles:
-      self:
         padding:
-          - pt-7
-          - pl-7
-          - pb-7
-          - pr-7
-    type: DividerSection
+          - pt-20
+          - pb-20
+          - pl-16
+          - pr-16
+    elementId: 'community'
+
+  # Testimonials
   - type: CarouselSection
     title: null
-    subtitle: What our customers say about us
+    subtitle: What our customers say
     items:
       - title: >-
-          “A designer knows he has achieved perfection not when there is nothing
-          left to add, but when there is nothing left to take away.”
-        tagline: Testimonial 1
-        subtitle: 'Maria Walters, Company'
+          "Zukosuite's AI features have completely transformed how I run my consulting business. The CRM predicts which leads are most likely to convert, and the automated follow-ups save me hours every week."
+        tagline: Consultant
+        subtitle: 'Sarah Chen, Strategy Consultant'
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          The integrated suite means I no longer juggle between 5 different apps. 
+          Everything talks to each other, and the AI insights help me make better decisions faster.
         image:
           url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          altText: Sarah Chen
           styles:
             self:
               borderRadius: full
@@ -435,16 +550,15 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          "Design is a plan for arranging elements in such a way as best to accomplish a particular purpose."
-        tagline: Testimonial 2
-        subtitle: 'John Doe, Company'
+          "The accounting AI caught deductions my previous accountant missed. It pays for itself just in tax savings. Plus, having my inbox, calendar, and tasks all in one place is a game-changer."
+        tagline: Freelancer
+        subtitle: 'Marcus Johnson, Web Developer'
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          As a freelancer, I need tools that work as hard as I do. Zukosuite automates 
+          the boring stuff so I can focus on what I love—building great websites.
         image:
           url: /images/person-placeholder-light.png
-          altText: John Doe
+          altText: Marcus Johnson
           styles:
             self:
               borderRadius: full
@@ -464,16 +578,15 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          "Design is how it works, how it functions. Good design doesn't just make a product aesthetically pleasing, it makes it a pleasure to use."
-        tagline: Testimonial 3
-        subtitle: 'Maria Walters, Company'
+          "We scaled from 3 to 15 people using Zukosuite. The project AI helps us estimate timelines accurately, and the unified inbox ensures no client communication gets lost."
+        tagline: Agency Owner
+        subtitle: 'Elena Rodriguez, Creative Agency'
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          The AI doesn't just automate—it actually provides insights that make us 
+          smarter. Our project delivery times improved by 30% in the first quarter.
         image:
           url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          altText: Elena Rodriguez
           styles:
             self:
               borderRadius: full
@@ -492,226 +605,43 @@ sections:
             flexDirection: row
             justifyContent: center
         type: FeaturedItem
-      - title: >-
-          “A designer knows he has achieved perfection not when there is nothing
-          left to add, but when there is nothing left to take away.”
-        tagline: Testimonial 4
-        subtitle: 'Maria Walters, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-      - title: >-
-          "Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated."
-        tagline: Testimonial 5
-        subtitle: 'Jane Walters, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-      - title: >-
-          “Quote from some important person goes right here. I love using Netlify Create.”
-        tagline: Testimonial 6
-        subtitle: 'Jane Doe, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/img-placeholder-dark.png
-          altText: Jane Doe
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-dark-fg-light
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-    elementId: null
+    elementId: 'testimonials'
     variant: next-prev-nav
     colors: bg-light-fg-dark
     styles:
       self:
         justifyContent: center
+        padding:
+          - pt-20
+          - pb-20
+          - pl-16
+          - pr-16
       subtitle:
         textAlign: center
-  - title:
-      text: List of features here
+
+  # CTA Section
+  - type: GenericSection
+    title:
+      text: Ready to Supercharge Your Business?
       color: text-primary
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Featured items section subtitle
-    items:
-      - title: Feature Item One
-        tagline: This is the tagline
-        subtitle: This is the item subtitle
-        text: |
-          Follow the tutorial to build your first Netlify Create site.
-        image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder Image
-          styles:
-            self:
-              borderRadius: x-large
-          type: ImageBlock
-        colors: bg-light-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: col
-        type: FeaturedItem
-      - title: Feature Item Two
-        tagline: This is the tagline
-        subtitle: This is the item subtitle
-        text: |
-          Follow the tutorial to build your first awesome Netlify Create site.
-        image:
-          url: /images/abstract-feature2.svg
-          altText: Placeholder image
-          styles:
-            self:
-              borderRadius: x-large
-          type: ImageBlock
-        colors: bg-light-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: col
-        type: FeaturedItem
-      - title: Feature Item Three
-        tagline: This is the tagline
-        subtitle: This is the item subtitle
-        text: |
-          Learn from the tutorial and build your first awesome Netlify Create site.
-        image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder image
-          styles:
-            self:
-              borderRadius: x-large
-          type: ImageBlock
-        colors: bg-light-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: col
-        type: FeaturedItem
-    variant: three-col-grid
-    colors: bg-neutral-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-16
-          - pl-8
-          - pb-16
-          - pr-8
-        justifyContent: center
-      subtitle:
-        textAlign: center
-    type: FeaturedItemsSection
-  - title:
-      text: Generic Section With A Form
-      color: text-dark
-      type: TitleBlock
-    subtitle: Section with a form subtitle
-    text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+    subtitle: Start your free 14-day trial today
+    text: |
+      Join 50,000+ professionals who've already made the switch. 
+      No credit card required. Full access to all AI features.
     media:
       fields:
-        - name: name
-          label: Name
-          hideLabel: true
-          placeholder: Your name
-          isRequired: true
-          width: full
-          type: TextFormControl
         - name: email
           label: Email
           hideLabel: true
-          placeholder: Your email
+          placeholder: Enter your email address
           isRequired: true
           width: full
           type: EmailFormControl
-        - name: message
-          label: Message
-          hideLabel: true
-          placeholder: Your message
-          width: full
-          type: TextareaFormControl
-      elementId: contact-form
+      elementId: signup-form
       styles:
         self:
           padding:
@@ -719,28 +649,38 @@ sections:
             - pb-6
             - pl-6
             - pr-6
-          borderColor: border-dark
+          borderColor: border-primary
           borderStyle: solid
-          borderWidth: 1
-          borderRadius: large
+          borderWidth: 2
+          borderRadius: x-large
       type: FormBlock
       submitButton:
         type: SubmitButtonFormControl
-        label: Submit
-        showIcon: false
+        label: Get Started Free
+        showIcon: true
         icon: arrowRight
         iconPosition: right
         style: primary
         elementId: null
     badge:
-      label: Contact Us
+      label: Free 14-Day Trial
       color: text-primary
       type: Badge
-    colors: bg-light-fg-dark
-    type: GenericSection
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-20
+          - pb-20
+          - pl-16
+          - pr-16
+        justifyContent: center
+        textAlign: center
+    elementId: 'signup'
+
 seo:
-  metaTitle: Home - Demo site
-  metaDescription: This demo site is built with Netlify Create.
+  metaTitle: Zukosuite - AI-Powered Business Suite for Freelancers & Entrepreneurs
+  metaDescription: The complete AI-powered business suite with accounting, CRM, project management, unified inbox, and more. Work smarter with intelligent automation.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout

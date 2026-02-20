@@ -1,0 +1,73 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="600" fill="#050505"/>
+  
+  <!-- Central brain node -->
+  <circle cx="300" cy="300" r="80" fill="#111" stroke="#39ff14" stroke-width="4"/>
+  <circle cx="300" cy="300" r="60" fill="none" stroke="#39ff14" stroke-width="2" opacity="0.5"/>
+  <circle cx="300" cy="300" r="40" fill="#39ff14" opacity="0.2"/>
+  <circle cx="300" cy="300" r="15" fill="#39ff14"/>
+  
+  <!-- Orbital nodes -->
+  <g stroke="#39ff14" stroke-width="2" opacity="0.6">
+    <!-- Top -->
+    <circle cx="300" cy="120" r="25" fill="#0a0a0a" stroke="#ff006e" stroke-width="3"/>
+    <line x1="300" y1="145" x2="300" y2="220"/>
+    
+    <!-- Top right -->
+    <circle cx="460" cy="180" r="20" fill="#0a0a0a" stroke="#00d9ff" stroke-width="3"/>
+    <line x1="445" y1="195" x2="365" y2="255"/>
+    
+    <!-- Right -->
+    <circle cx="500" cy="300" r="30" fill="#0a0a0a" stroke="#39ff14" stroke-width="3"/>
+    <line x1="470" y1="300" x2="380" y2="300"/>
+    
+    <!-- Bottom right -->
+    <circle cx="460" cy="420" r="22" fill="#0a0a0a" stroke="#ff006e" stroke-width="3"/>
+    <line x1="445" y1="405" x2="365" y2="345"/>
+    
+    <!-- Bottom -->
+    <circle cx="300" cy="480" r="28" fill="#0a0a0a" stroke="#00d9ff" stroke-width="3"/>
+    <line x1="300" y1="455" x2="300" y2="380"/>
+    
+    <!-- Bottom left -->
+    <circle cx="140" cy="420" r="18" fill="#0a0a0a" stroke="#39ff14" stroke-width="3"/>
+    <line x1="155" y1="405" x2="235" y2="345"/>
+    
+    <!-- Left -->
+    <circle cx="100" cy="300" r="25" fill="#0a0a0a" stroke="#ff006e" stroke-width="3"/>
+    <line x1="125" y1="300" x2="220" y2="300"/>
+    
+    <!-- Top left -->
+    <circle cx="140" cy="180" r="20" fill="#0a0a0a" stroke="#00d9ff" stroke-width="3"/>
+    <line x1="155" y1="195" x2="235" y2="255"/>
+  </g>
+  
+  <!-- Inner circuit lines -->
+  <g stroke="#39ff14" stroke-width="1" opacity="0.3">
+    <path d="M 280 250 Q 250 200 280 150" fill="none"/>
+    <path d="M 320 250 Q 350 200 320 150" fill="none"/>
+    <path d="M 350 280 Q 400 250 440 280" fill="none"/>
+    <path d="M 350 320 Q 400 350 440 320" fill="none"/>
+    <path d="M 280 350 Q 250 400 280 450" fill="none"/>
+    <path d="M 320 350 Q 350 400 320 450" fill="none"/>
+    <path d="M 250 280 Q 200 250 160 280" fill="none"/>
+    <path d="M 250 320 Q 200 350 160 320" fill="none"/>
+  </g>
+  
+  <!-- Corner brackets -->
+  <g stroke="#39ff14" stroke-width="3" fill="none">
+    <path d="M 20 50 L 20 20 L 50 20"/>
+    <path d="M 550 20 L 580 20 L 580 50"/>
+    <path d="M 20 550 L 20 580 L 50 580"/>
+    <path d="M 550 580 L 580 580 L 580 550"/>
+  </g>
+  
+  <!-- Decorative hexagons -->
+  <g stroke="#333" stroke-width="1" fill="none" opacity="0.3">
+    <polygon points="300,50 330,75 330,105 300,120 270,105 270,75"/>
+    <polygon points="520,280 550,305 550,335 520,350 490,335 490,305"/>
+    <polygon points="300,510 330,535 330,565 300,580 270,565 270,535"/>
+    <polygon points="80,280 110,305 110,335 80,350 50,335 50,305"/>
+  </g>
+</svg>

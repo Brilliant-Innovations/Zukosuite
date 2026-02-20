@@ -1,15 +1,73 @@
 {
     "logo": {
-        "url": "/images/logo-dark.svg",
-        "altText": "Logo dark",
+        "url": "/images/zuko-logo.png",
+        "altText": "Zukosuite",
         "styles": {
             "self": {
-                "margin": ["mr-3"]
+                "margin": [
+                    "mr-3"
+                ]
             }
         },
         "type": "ImageBlock"
     },
     "primaryLinks": [
+        {
+            "label": "Products",
+            "altText": "Products",
+            "links": [
+                {
+                    "label": "Accounting",
+                    "url": "#",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "CRM",
+                    "url": "#",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Project Management",
+                    "url": "#",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Unified Inbox",
+                    "url": "#",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Communications",
+                    "url": "#",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Learning Portal",
+                    "url": "#",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                }
+            ],
+            "labelStyle": "secondary",
+            "type": "SubNav"
+        },
         {
             "label": "Pricing",
             "url": "/pricing",
@@ -19,46 +77,36 @@
             "type": "Link"
         },
         {
-            "label": "Blog",
-            "altText": "Blog",
-            "url": "/blog",
+            "label": "AI Features",
+            "url": "#ai-features",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
             "type": "Link"
         },
         {
-            "label": "Careers",
-            "altText": "Careers page",
-            "url": "/careers",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
-        },
-        {
-            "label": "Dropdown",
-            "altText": "Dropdown",
+            "label": "Resources",
+            "altText": "Resources",
             "links": [
                 {
-                    "label": "Dropdown item",
-                    "url": "/",
+                    "label": "Blog",
+                    "url": "/blog",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
                     "type": "Link"
                 },
                 {
-                    "label": "Dropdown item",
-                    "url": "/",
+                    "label": "Community",
+                    "url": "#",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
                     "type": "Link"
                 },
                 {
-                    "label": "Dropdown item",
-                    "url": "/",
+                    "label": "Documentation",
+                    "url": "#",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
@@ -71,20 +119,20 @@
     ],
     "secondaryLinks": [
         {
-            "label": "Sign up",
+            "label": "Sign up free",
             "altText": "Sign up",
-            "url": "https://app.netlify.com/signup",
+            "url": "#",
             "icon": "arrowRight",
             "iconPosition": "right",
-            "style": "secondary",
+            "style": "primary",
             "type": "Button"
         },
         {
             "label": "Log in",
-            "url": "/",
+            "url": "#",
             "icon": "arrowRight",
             "iconPosition": "right",
-            "style": "primary",
+            "style": "secondary",
             "type": "Button"
         }
     ],
