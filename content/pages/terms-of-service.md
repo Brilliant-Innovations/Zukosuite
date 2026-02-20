@@ -9,7 +9,7 @@ sections:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Effective Date: February 20, 2026
+    subtitle: "Effective Date: February 20, 2026"
     text: >
       ## 1. Acceptance of Terms
 

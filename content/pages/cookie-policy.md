@@ -9,7 +9,7 @@ sections:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Last Updated: February 20, 2026
+    subtitle: "Last Updated: February 20, 2026"
     text: >
       ## 1. What Are Cookies
 
