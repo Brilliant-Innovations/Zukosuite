@@ -21,9 +21,12 @@ export default function FinalCTA() {
               Start Free — No Card Required
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <button className="px-10 py-5 rounded-full font-semibold text-white border border-white/20 hover:bg-white/5 text-lg flex items-center justify-center gap-2 backdrop-blur-sm hover:scale-105 active:scale-95 transition-all duration-200">
+            <Link
+              href="/demo"
+              className="px-10 py-5 rounded-full font-semibold text-white border border-white/20 hover:bg-white/5 text-lg flex items-center justify-center gap-2 backdrop-blur-sm hover:scale-105 active:scale-95 transition-all duration-200"
+            >
               Book a Demo
-            </button>
+            </Link>
           </div>
           <div className="mt-12 flex items-center justify-center gap-6 text-sm text-slate-500">
             {["Early access", "No credit card required", "Private beta invites"].map((item, i) => (
