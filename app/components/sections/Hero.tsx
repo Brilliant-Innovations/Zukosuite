@@ -24,9 +24,9 @@ export default function Hero() {
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            <span className="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">The next step,</span>
+            <span className="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">Zuko keeps you</span>
             <br />
-            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">always drafted.</span>
+            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">one step ahead.</span>
           </h1>
 
           <p className="text-xl text-slate-400 max-w-xl leading-relaxed">
