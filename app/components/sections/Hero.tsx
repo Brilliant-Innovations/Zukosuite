@@ -42,10 +42,13 @@ export default function Hero() {
               <ArrowRight className="w-5 h-5" />
             </Link>
 
-            <motion.button className="px-8 py-4 rounded-full font-semibold text-white border border-white/20 hover:bg-white/5 flex items-center gap-2 backdrop-blur-sm" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              href="/demo"
+              className="px-8 py-4 rounded-full font-semibold text-white border border-white/20 hover:bg-white/5 flex items-center gap-2 backdrop-blur-sm hover:scale-105 active:scale-95 transition-all duration-200"
+            >
               <Play className="w-5 h-5" />
               See It In Action
-            </motion.button>
+            </Link>
           </div>
 
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-4">

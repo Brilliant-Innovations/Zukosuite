@@ -2,10 +2,10 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, Zap, CheckCircle } from 'lucide-react'
 import BackgroundEffects from '../components/sections/BackgroundEffects'
 import Navigation from '../components/sections/Navigation'
+
 const industries = [
   'Design / Creative',
   'Marketing / Advertising',
@@ -99,15 +99,8 @@ export default function DemoPage() {
 
       <div className="flex-1 flex items-start justify-center px-6 pt-28 pb-20">
         <div className="w-full max-w-2xl">
-          <AnimatePresence mode="wait">
-            {!submitted ? (
-              <motion.div
-                key="form"
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.5 }}
-              >
+          {!submitted ? (
+            <div style={{ animation: 'fade-up 0.5s ease-out both' }}>
                 {/* Header */}
                 <div className="mb-10">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm mb-6">
@@ -220,15 +213,9 @@ export default function DemoPage() {
                     We&apos;ll be in touch within one business day. No sales pressure — just a walkthrough.
                   </p>
                 </form>
-              </motion.div>
-            ) : (
-              <motion.div
-                key="success"
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-center py-12"
-              >
+            </div>
+          ) : (
+            <div style={{ animation: 'fade-up 0.5s ease-out both' }} className="text-center py-12">
                 <div className="w-20 h-20 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center mx-auto mb-8">
                   <CheckCircle className="w-9 h-9 text-green-400" />
                 </div>
@@ -247,9 +234,8 @@ export default function DemoPage() {
                 >
                   ← Back to home
                 </Link>
-              </motion.div>
-            )}
-          </AnimatePresence>
+            </div>
+          )}
         </div>
       </div>
     </main>
