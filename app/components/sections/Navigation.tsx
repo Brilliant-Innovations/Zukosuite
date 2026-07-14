@@ -27,6 +27,7 @@ export default function Navigation() {
             { label: 'Features',  id: 'features'  },
             { label: 'AI Agents', id: 'ai-agents' },
             { label: 'Security',  id: 'security'  },
+            { label: 'FAQ',       id: 'faq'       },
           ].map(({ label, id }, i) => (
             <a
               key={id}
@@ -50,7 +51,7 @@ export default function Navigation() {
           href="/waitlist"
           className="px-6 py-2.5 bg-white text-slate-950 rounded-full font-semibold text-sm hover:bg-slate-200 hover:scale-105 active:scale-95 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-200 shadow-lg shadow-white/10"
         >
-          Start Free
+          Get Early Access
         </Link>
       </div>
     </nav>

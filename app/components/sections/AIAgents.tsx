@@ -27,7 +27,7 @@ export default function AIAgents() {
             <span className="text-white">working together</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Context-aware assistants that prepare the next step — you stay in control.
+            Every agent shares one business context and long-term memory — so the next step is prepared before you ask, and you stay in control.
           </p>
         </motion.div>
 

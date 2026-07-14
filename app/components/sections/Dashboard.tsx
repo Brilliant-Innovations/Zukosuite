@@ -8,7 +8,7 @@ export default function Dashboard() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Finally, a system that <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">fits how you work</span>
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">Whether you think in tasks, emails, or deals — Zuko adapts to you.</p>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">Every module is a drag-and-drop widget — arrange your workspace around how you think, whether that&apos;s tasks, emails, or deals. Pick a theme, keep personal and business side by side.</p>
         </div>
 
         <div className="scroll-reveal from-up relative" style={{ animationDelay: '0.15s' }}>

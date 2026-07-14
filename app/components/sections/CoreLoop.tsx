@@ -1,23 +1,24 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { UserPlus, CalendarDays, FolderOpen, CheckSquare, FileText, Send, CircleDollarSign } from 'lucide-react'
+import { ChevronRight, ChevronLeft, ChevronDown, ChevronUp, Mail, FileText, Briefcase, CircleDollarSign, PenLine, RotateCcw } from 'lucide-react'
 
+// The six lifecycle threads Zuko tracks in the Unified Inbox — same names,
+// same badge colors as the product.
 const steps = [
-  { icon: UserPlus,         label: 'First Contact', desc: 'A new lead mentions a project. Zuko captures the context.',              color: 'from-indigo-500 to-violet-500' },
-  { icon: CalendarDays,     label: 'Meeting',       desc: 'Zuko suggests times and prepares the calendar invite.',                  color: 'from-violet-500 to-purple-500' },
-  { icon: FolderOpen,       label: 'Project',       desc: 'Scope is agreed, so Zuko drafts the project plan.',                     color: 'from-purple-500 to-pink-500'   },
-  { icon: CheckSquare,      label: 'Tasks',         desc: 'Work starts with tasks, owners, dependencies, and risks.',              color: 'from-pink-500 to-rose-500'     },
-  { icon: FileText,         label: 'Invoice',       desc: 'The project closes and Zuko prepares the invoice.',                     color: 'from-rose-500 to-orange-500'   },
-  { icon: Send,             label: 'Send',          desc: 'You review and approve before anything goes out.',                      color: 'from-orange-500 to-amber-500'  },
-  { icon: CircleDollarSign, label: 'Paid',          desc: 'Payment status, receivables, and follow-ups stay connected.',           color: 'from-amber-500 to-green-500'   },
+  { icon: Mail,             label: 'Inquiry',       dot: 'bg-sky-400',     color: 'from-sky-500 to-cyan-500',        desc: 'A new lead asks about work. Zuko captures the context and drafts your reply.' },
+  { icon: FileText,         label: 'Proposal',      dot: 'bg-amber-400',   color: 'from-amber-500 to-orange-500',    desc: 'The scope takes shape. Zuko prepares the quote and follows up while it’s pending.' },
+  { icon: Briefcase,        label: 'Active work',   dot: 'bg-emerald-400', color: 'from-emerald-500 to-green-500',   desc: 'Delivery runs on drafted tasks, owners, and timelines — all linked to the client.' },
+  { icon: CircleDollarSign, label: 'Payment',       dot: 'bg-slate-400',   color: 'from-slate-500 to-slate-600',     desc: 'The invoice goes out with your approval. Overdue? The chaser is drafted, not sent.' },
+  { icon: PenLine,          label: 'Revisions',     dot: 'bg-fuchsia-400', color: 'from-purple-500 to-fuchsia-500',  desc: 'Feedback rounds and post-delivery tweaks stay attached to the same client story.' },
+  { icon: RotateCcw,        label: 'Re-engagement', dot: 'bg-indigo-400',  color: 'from-indigo-500 to-violet-500',   desc: 'Months later, the thread picks up with full context — nothing re-explained.' },
 ]
 
-// Top row: steps 0–3 (left→right), bottom row: steps 6–4 (right→left), forming a loop
-const topRow    = steps.slice(0, 4)
-const bottomRow = steps.slice(4).reverse()   // [6, 5, 4] rendered right→left
+// Top row: steps 0–2 (left→right), bottom row: steps 5–3 (right→left), forming a loop
+const topRow    = steps.slice(0, 3)
+const bottomRow = steps.slice(3).reverse()   // [5, 4, 3] rendered left→right = flows right→left
 
-function StepCard({ step, index, delay }: { step: typeof steps[0]; index: number; delay: number }) {
+function StepCard({ step, delay }: { step: typeof steps[0]; delay: number }) {
   return (
     <motion.div
       className="flex flex-col items-center text-center group"
@@ -29,17 +30,23 @@ function StepCard({ step, index, delay }: { step: typeof steps[0]; index: number
       <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg mb-3 group-hover:scale-110 transition-transform duration-300`}>
         <step.icon className="w-7 h-7 text-white" />
       </div>
-      <div className="text-xs font-semibold text-slate-300 uppercase tracking-widest mb-1">{step.label}</div>
-      <p className="text-xs text-slate-500 leading-relaxed max-w-[130px]">{step.desc}</p>
+      {/* Thread badge — mirrors the lifecycle badges in the Unified Inbox */}
+      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/80 border border-white/10 text-xs font-semibold text-slate-200 mb-2">
+        <span className={`w-1.5 h-1.5 rounded-full ${step.dot}`} />
+        {step.label}
+      </span>
+      <p className="text-sm text-slate-500 leading-relaxed max-w-[200px]">{step.desc}</p>
     </motion.div>
   )
 }
 
-function Connector({ reverse = false }: { reverse?: boolean }) {
+function Arrow({ reverse = false }: { reverse?: boolean }) {
   return (
-    <div className={`hidden lg:flex items-center ${reverse ? 'flex-row-reverse' : ''} flex-shrink-0 mt-[-28px]`}>
-      <div className="w-8 border-t border-dashed border-indigo-500/30" />
-      <div className={`w-2 h-2 rounded-full bg-indigo-500/40 ${reverse ? '-ml-1' : '-mr-1'}`} />
+    <div className={`hidden lg:flex items-center flex-shrink-0 w-16 mt-[28px] self-start ${reverse ? 'flex-row-reverse' : ''}`}>
+      <div className={`h-0.5 flex-1 rounded-full bg-gradient-to-r ${reverse ? 'from-purple-400/70 to-indigo-400/20' : 'from-indigo-400/20 to-purple-400/70'}`} />
+      {reverse
+        ? <ChevronLeft className="w-5 h-5 text-purple-400 -mr-1.5 flex-shrink-0" />
+        : <ChevronRight className="w-5 h-5 text-purple-400 -ml-1.5 flex-shrink-0" />}
     </div>
   )
 }
@@ -61,54 +68,51 @@ export default function CoreLoop() {
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">The whole client journey.</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            From first contact to paid invoice — Zuko keeps the work moving, with each step drafted for your approval.
+            Zuko tracks each stage as a living thread in your inbox — from first inquiry to the next project — with the next step drafted for your approval.
           </p>
         </motion.div>
 
-        {/* Loop circuit — top row left→right, bottom row right→left */}
-        <div className="relative">
+        {/* Loop circuit — top row left→right, bottom row right→left, closing back to the start */}
+        <div className="relative hidden lg:block">
 
-          {/* Top row: steps 1–4 */}
-          <div className="flex items-start justify-between gap-2 mb-6">
+          {/* Top row: Inquiry → Proposal → Active work */}
+          <div className="flex items-start justify-center gap-2 mb-10">
             {topRow.map((step, i) => (
-              <div key={step.label} className="flex items-center gap-2 flex-1 min-w-0">
-                <div className="flex-1 min-w-0">
-                  <StepCard step={step} index={i} delay={i * 0.1} />
-                </div>
-                {i < topRow.length - 1 && <Connector />}
+              <div key={step.label} className="flex items-start gap-2">
+                <StepCard step={step} delay={i * 0.12} />
+                {i < topRow.length - 1 && <Arrow />}
               </div>
             ))}
 
-            {/* Right-side arc connector */}
-            <div className="hidden lg:flex flex-col items-center self-stretch justify-center ml-2">
-              <div className="w-4 border-t border-dashed border-indigo-500/30" />
-              <div className="w-4 h-16 border-r border-b rounded-br-2xl border-dashed border-indigo-500/30 mt-[-1px]" />
+            {/* Right arc: down from Active work to Payment */}
+            <div className="flex flex-col items-center self-stretch justify-center ml-4">
+              <div className="w-6 h-24 border-r-2 border-t-2 rounded-tr-3xl border-indigo-400/40" />
+              <ChevronDown className="w-5 h-5 text-purple-400 -mt-1.5 mr-[-13px] self-end" />
             </div>
           </div>
 
-          {/* Bottom row: steps 7–5 (right→left direction) */}
-          <div className="flex items-start justify-between gap-2">
-            {/* Left-side arc connector */}
-            <div className="hidden lg:flex flex-col items-center self-stretch justify-center mr-2">
-              <div className="w-4 h-16 border-l border-t rounded-tl-2xl border-dashed border-indigo-500/30 mb-[-1px]" />
-              <div className="w-4 border-b border-dashed border-indigo-500/30" />
+          {/* Bottom row: Payment → Revisions → Re-engagement (flowing right→left) */}
+          <div className="flex items-start justify-center gap-2">
+            {/* Left arc: back up from Re-engagement to Inquiry */}
+            <div className="flex flex-col items-center self-stretch justify-center mr-4">
+              <ChevronUp className="w-5 h-5 text-purple-400 -mb-1.5 ml-[-13px] self-start" />
+              <div className="w-6 h-24 border-l-2 border-b-2 rounded-bl-3xl border-indigo-400/40" />
             </div>
 
             {bottomRow.map((step, i) => (
-              <div key={step.label} className="flex items-center gap-2 flex-1 min-w-0">
-                {i > 0 && <Connector reverse />}
-                <div className="flex-1 min-w-0">
-                  <StepCard step={step} index={i + topRow.length} delay={(i + topRow.length) * 0.1} />
-                </div>
+              <div key={step.label} className="flex items-start gap-2">
+                <StepCard step={step} delay={(i + topRow.length) * 0.12} />
+                {i < bottomRow.length - 1 && <Arrow reverse />}
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Mobile: simple vertical stack */}
-          <div className="lg:hidden mt-8 space-y-6">
-            {steps.map((step, i) => (
+        {/* Mobile: vertical flow with connectors */}
+        <div className="lg:hidden">
+          {steps.map((step, i) => (
+            <div key={step.label}>
               <motion.div
-                key={step.label}
                 className="flex items-start gap-4 p-4 rounded-xl bg-slate-900/50 border border-white/5"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -119,12 +123,20 @@ export default function CoreLoop() {
                   <step.icon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-white mb-1">{step.label}</div>
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-800/80 border border-white/10 text-xs font-semibold text-slate-200 mb-1.5">
+                    <span className={`w-1.5 h-1.5 rounded-full ${step.dot}`} />
+                    {step.label}
+                  </span>
                   <p className="text-sm text-slate-400">{step.desc}</p>
                 </div>
               </motion.div>
-            ))}
-          </div>
+              {i < steps.length - 1 && (
+                <div className="flex justify-center py-1">
+                  <ChevronDown className="w-4 h-4 text-indigo-400/60" />
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
         {/* Bottom anchor */}
@@ -135,8 +147,8 @@ export default function CoreLoop() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-900/50 border border-white/10 text-slate-400 text-sm">
-            Enter the loop at any point — inbox, invoice, project, or follow-up.
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-900/50 border border-white/10 text-slate-400 text-sm max-w-3xl">
+            Threads run in parallel — one client can have an active project, a pending proposal, and an unpaid invoice at once. Zuko keeps each one moving.
           </div>
         </motion.div>
       </div>

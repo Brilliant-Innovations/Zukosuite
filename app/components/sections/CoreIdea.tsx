@@ -15,8 +15,8 @@ export default function CoreIdea() {
             <span className="text-white">Every tool knows </span>
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">one thing.</span>
             <br />
-            <span className="text-white">Zuko knows </span>
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">everything.</span>
+            <span className="text-white">Zuko sees </span>
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">the whole picture.</span>
           </h2>
         </div>
 
@@ -42,12 +42,12 @@ export default function CoreIdea() {
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10" />
           <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-6">So you become the system</h3>
+              <h3 className="text-3xl font-bold text-white mb-6">Right now, YOU are the integration</h3>
               <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                Constantly connecting everything manually. Copying data between apps. Losing context. Until now.
+                Copying data between apps. Reconnecting context by hand. Holding the whole picture in your head. Let Zuko do that for you! What it does:
               </p>
               <div className="space-y-4">
-                {["Tracks your full client-work context", "Surfaces and drafts the next step across modules", "Keeps you in control with draft-first approvals"].map((item, i) => (
+                {["Tracks your full client-work context", "Remembers your clients, preferences, and history — you never re-explain", "Surfaces and drafts the next step across modules", "Keeps you in control — everything waits for your approval"].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-slate-200">{item}</span>

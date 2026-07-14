@@ -5,9 +5,27 @@ import AnimationObserver from './components/AnimationObserver'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const description =
+  'Zuko connects your inbox, CRM, projects, finance, and calendar into one client-work layer. It drafts the next step — you approve before anything goes out.'
+
 export const metadata: Metadata = {
-  title: 'Zuko - AI That Runs Your Business',
-  description: 'Zuko replaces your CRM, inbox, invoicing, projects, and calendar — connected through AI that executes the busywork.',
+  metadataBase: new URL('https://zuko.ai'),
+  title: 'Zuko — Your next move, already drafted',
+  description,
+  openGraph: {
+    title: 'Zuko — Your next move, already drafted',
+    description,
+    url: '/',
+    siteName: 'Zuko',
+    images: ['/logo.png'],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Zuko — Your next move, already drafted',
+    description,
+    images: ['/logo.png'],
+  },
 }
 
 export default function RootLayout({

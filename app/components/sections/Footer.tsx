@@ -14,7 +14,7 @@ export default function Footer() {
             </div>
             <span className="font-bold text-white">Zuko</span>
             <span className="text-slate-600 mx-2">—</span>
-            <span className="text-slate-500 text-sm">Draft-first AI for client work</span>
+            <span className="text-slate-500 text-sm">Your next move, already drafted</span>
           </div>
 
           {/* Copyright + policy links */}

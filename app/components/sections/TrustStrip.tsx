@@ -1,10 +1,10 @@
-import { Shield, Lock, Layers, Clock } from 'lucide-react'
+import { Shield, Lock, Layers, Mail } from 'lucide-react'
 
 const items = [
-  { icon: Shield, text: "Draft-first AI" },
+  { icon: Shield, text: "Nothing sent without you" },
   { icon: Lock, text: "Secure workspace isolation" },
   { icon: Layers, text: "One connected client workflow" },
-  { icon: Clock, text: "Cut the admin drag" },
+  { icon: Mail, text: "Works with Gmail, Outlook & IMAP" },
 ]
 
 export default function TrustStrip() {

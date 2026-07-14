@@ -28,7 +28,7 @@ export default function Terms() {
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">About Zuko</h2>
             <p>
-              Zuko is a draft-first AI operating layer for freelancers, consultants, and small teams.
+              Zuko is an AI-assisted operating layer for freelancers, consultants, and small teams, in which AI-prepared actions require user approval before execution.
               It connects your inbox, CRM, projects, finance, and calendar into a shared client-work
               context, and prepares next steps for your review and approval.
             </p>

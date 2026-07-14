@@ -11,7 +11,7 @@ const pairs = [
   },
   {
     pain: 'Miss a follow-up and risk the relationship',
-    fix:  'Zuko surfaces what needs attention before it slips.',
+    fix:  'Automations watch deadlines and receivables around the clock and surface what needs attention before it slips.',
   },
   {
     pain: 'Rebuild project plans from scratch every time',
@@ -39,7 +39,7 @@ export default function PainPoints() {
             </span>
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            The hours that don&apos;t earn anything — organised, drafted, and ready for review.
+            The hours that don&apos;t earn anything — Zuko turns them into drafts waiting for your approval.
           </p>
         </div>
 

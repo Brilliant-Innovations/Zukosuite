@@ -8,12 +8,12 @@ export default function Security() {
           <div className="scroll-reveal from-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm mb-6">
               <Lock className="w-4 h-4" />
-              <span>Enterprise-grade security</span>
+              <span>Security by design</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Your data stays yours.<span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Always.</span>
             </h2>
-            <p className="text-lg text-slate-400 mb-8">Zuko is built with strict workspace isolation and secure access controls. We never train AI on your data without consent.</p>
+            <p className="text-lg text-slate-400 mb-8">Every workspace is isolated with row-level security, enforced at the database itself. Your data is never used to train AI models.</p>
             <div className="space-y-4">
               {[{ icon: Lock, text: "Private workspaces with strict isolation" }, { icon: Users, text: "Role-based access control" }, { icon: Shield, text: "Encrypted credentials & integrations" }, { icon: CheckCircle, text: "Audit trail for AI-drafted and user-approved actions" }].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
@@ -38,7 +38,7 @@ export default function Security() {
                 <div className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-medium">Active</div>
               </div>
               <div className="space-y-4">
-                {[{ label: "Encryption at rest", status: "AES-256" }, { label: "Encryption in transit", status: "TLS 1.3" }, { label: "Authentication", status: "SSO + 2FA" }, { label: "Data residency", status: "Your choice" }].map((item, i) => (
+                {[{ label: "Workspace isolation", status: "Row-level security" }, { label: "Credential encryption", status: "AES-256-GCM" }, { label: "Encryption keys", status: "Rotation supported" }, { label: "Encryption in transit", status: "TLS" }].map((item, i) => (
                   <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-slate-800/50">
                     <span className="text-slate-400">{item.label}</span>
                     <span className="text-white font-medium">{item.status}</span>

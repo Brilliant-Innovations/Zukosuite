@@ -20,7 +20,7 @@ export default function Hero() {
         <motion.div className="space-y-8" initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
           <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
             <span className="animate-pulse">✦</span>
-            <span>Draft-first AI for client work — now in early access</span>
+            <span>Your next move, already drafted — now in early access</span>
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
@@ -38,7 +38,7 @@ export default function Hero() {
               href="/waitlist"
               className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full font-semibold text-white shadow-xl shadow-indigo-500/25 flex items-center gap-2 hover:scale-105 active:scale-95 hover:shadow-[0_0_40px_rgba(99,102,241,0.4)] transition-all duration-200"
             >
-              Start Free — No Card Required
+              Get Early Access
               <ArrowRight className="w-5 h-5" />
             </Link>
 
@@ -52,7 +52,7 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-4">
-            {['Early access', 'No card required', 'Drafts before action'].map((item) => (
+            {['Free during early access', 'No card required', 'You approve everything'].map((item) => (
               <span key={item} className="flex items-center gap-2 text-sm text-slate-400">
                 <CheckCircle className="w-4 h-4 text-indigo-400 flex-shrink-0" />
                 {item}
@@ -112,7 +112,7 @@ export default function Hero() {
 
               <div className="pt-4 border-t border-white/5">
                 <div className="flex items-center justify-between text-xs text-slate-500">
-                  <span>🛡️ Draft-first approvals enabled</span>
+                  <span>🛡️ Approval required before send</span>
                   <span>Last sync: 2s ago</span>
                 </div>
               </div>
