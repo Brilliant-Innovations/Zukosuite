@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
     }
 
     await resend.emails.send({
-      from: process.env.WAITLIST_FROM_EMAIL as string,   // e.g. waitlist@zuko.ai
+      from: process.env.WAITLIST_FROM_EMAIL as string,   // e.g. waitlist@zukosuite.com
       to:   process.env.WAITLIST_NOTIFY_EMAIL as string, // your own inbox
       subject: `Zuko waitlist — ${email}`,
       html: `

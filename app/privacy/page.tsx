@@ -3,30 +3,31 @@ import { Zap } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Zuko',
+  title: 'Privacy Policy',
+  alternates: { canonical: '/privacy' },
   description: 'How Zuko handles your data.',
 }
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-cream text-ink">
       <div className="max-w-3xl mx-auto px-6 py-20">
 
         {/* Back nav */}
-        <Link href="/" className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm mb-12">
-          <Zap className="w-4 h-4 text-indigo-400" />
-          <span className="font-semibold text-white">Zuko</span>
-          <span className="text-slate-600 mx-1">·</span>
+        <Link href="/" className="inline-flex items-center gap-2 text-muted hover:text-ink transition-colors text-sm mb-12">
+          <Zap className="w-4 h-4 text-teal-deep" />
+          <span className="font-semibold text-ink">Zuko</span>
+          <span className="text-faint mx-1">·</span>
           Back to home
         </Link>
 
         <h1 className="text-4xl font-bold mb-3">Privacy Policy</h1>
-        <p className="text-slate-400 mb-12">Last updated: June 2026</p>
+        <p className="text-muted mb-12">Last updated: June 2026</p>
 
-        <div className="prose prose-invert max-w-none space-y-10 text-slate-300 leading-relaxed">
+        <div className="prose max-w-none space-y-10 text-body leading-relaxed">
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-3">The short version</h2>
+            <h2 className="text-xl font-semibold text-ink mb-3">The short version</h2>
             <p>
               Zuko collects only what is necessary to operate the product. We do not sell your data.
               We do not share your data with third parties for marketing purposes. We do not build
@@ -35,7 +36,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-3">What we collect</h2>
+            <h2 className="text-xl font-semibold text-ink mb-3">What we collect</h2>
             <p>We collect the minimum information required to run the service:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
               <li>Your email address, used to create and identify your account.</li>
@@ -46,7 +47,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-3">What we do not collect</h2>
+            <h2 className="text-xl font-semibold text-ink mb-3">What we do not collect</h2>
             <ul className="list-disc pl-6 mt-3 space-y-2">
               <li>We do not collect data for advertising or audience targeting.</li>
               <li>We do not use third-party tracking pixels.</li>
@@ -55,7 +56,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-3">AI and your data</h2>
+            <h2 className="text-xl font-semibold text-ink mb-3">AI and your data</h2>
             <p>
               Zuko uses AI to draft suggestions, surface priorities, and prepare next steps within your workspace.
               Your workspace data is used to power these features. We do not use your data to train
@@ -65,7 +66,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-3">How we store and protect your data</h2>
+            <h2 className="text-xl font-semibold text-ink mb-3">How we store and protect your data</h2>
             <p>
               Your data is stored in a private workspace with strict isolation — it is not accessible
               to other Zuko users. We use encryption in transit (TLS 1.3) and encryption at rest
@@ -74,7 +75,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-3">How long we keep your data</h2>
+            <h2 className="text-xl font-semibold text-ink mb-3">How long we keep your data</h2>
             <p>
               We retain your data for as long as your account is active. If you request deletion,
               we will remove your personal data from our systems within 30 days, except where
@@ -83,7 +84,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-3">Your rights</h2>
+            <h2 className="text-xl font-semibold text-ink mb-3">Your rights</h2>
             <p>You have the right to:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
               <li>Access the personal data we hold about you.</li>
@@ -95,20 +96,20 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-3">Contact</h2>
+            <h2 className="text-xl font-semibold text-ink mb-3">Contact</h2>
             <p>
               For privacy questions or data requests, email{' '}
-              <a href="mailto:privacy@zuko.ai" className="text-indigo-400 hover:text-indigo-300 transition-colors">
-                privacy@zuko.ai
+              <a href="mailto:privacy@zukosuite.com" className="text-teal-deep hover:text-ink transition-colors">
+                privacy@zukosuite.com
               </a>.
             </p>
           </section>
 
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/5 flex gap-6 text-sm text-slate-500">
-          <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
-          <Link href="/cookies" className="hover:text-white transition-colors">Cookie Policy</Link>
+        <div className="mt-16 pt-8 border-t border-hairline flex gap-6 text-sm text-muted">
+          <Link href="/terms" className="hover:text-ink transition-colors">Terms of Use</Link>
+          <Link href="/cookies" className="hover:text-ink transition-colors">Cookie Policy</Link>
         </div>
       </div>
     </div>

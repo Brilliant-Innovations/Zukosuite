@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zuko Landing Site
 
-## Getting Started
+Marketing site for **Zuko OS** — the business operating system for founders, freelancers,
+consultants, and small teams. Next.js 16 (App Router) + Tailwind CSS v4.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # serves on http://localhost:4320
+npm run build    # production build (includes TypeScript checks)
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design language
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The site implements **Zuko OS design language v1** (August 2026): warm cream ground
+(`#f3efe6`), ink typography, and flat accents sampled from the brand logo — teal, red, blue,
+petrol — with WCAG-AA-adjusted text variants. Display type is **Archivo**, body/UI is
+**Instrument Sans**, both self-hosted via `next/font` (no external font requests).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- All design tokens live in [`app/globals.css`](app/globals.css) (`@theme` block) — change
+  colors there, not in components.
+- The signed-off design canvas (source of truth for visuals) is a Claude artifact maintained
+  alongside this repo; ask the design owner for the current link.
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+- [`app/page.tsx`](app/page.tsx) — section order of the landing page (do not reorder casually:
+  the page is SEO-indexed).
+- [`app/components/sections/`](app/components/sections/) — one component per section. Product
+  "snippets" inside them are deliberately **illustrative** (framed with dashed
+  "From the product · illustrative data" mats, `aria-hidden` sample data) — they are marketing
+  gems, not live app screenshots.
+- [`app/waitlist`](app/waitlist/page.tsx) / [`app/demo`](app/demo/page.tsx) — conversion pages
+  (forms post to `app/api/waitlist` and `app/api/demo`).
+- `app/privacy`, `app/terms`, `app/cookies` — legal pages.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content rules
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Every product capability claimed on the page was verified against the actual product
+  codebases (main app, form builder, timezone planner) in August 2026 — keep new claims
+  grounded the same way, and respect the guardrail language ("Zuko drafts. You approve.").
+- Animations are calm loops: play once, hold several seconds, refresh; everything stills
+  under `prefers-reduced-motion`, and no content is ever hidden behind a scroll reveal
+  (reveals are fail-open enhancements).
 
-## Deploy on Vercel
+## Validation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`npm run build` is the release gate. The repo also carries a Sentry evidence ledger under
+`.sentry/` (gitignored) when validated through the owner's Sentry tooling.

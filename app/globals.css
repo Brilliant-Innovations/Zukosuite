@@ -1,41 +1,68 @@
 @import "tailwindcss";
 
 @theme {
-  --color-slate-950: #020617;
-  --color-slate-900: #0f172a;
-  --color-slate-800: #1e293b;
-  --color-slate-700: #334155;
-  --color-slate-600: #475569;
-  --color-slate-500: #64748b;
-  --color-slate-400: #94a3b8;
-  --color-slate-300: #cbd5e1;
-  --color-slate-200: #e2e8f0;
-  --color-indigo-500: #6366f1;
-  --color-indigo-600: #4f46e5;
-  --color-indigo-400: #818cf8;
-  --color-indigo-950: #1e1b4b;
-  --color-purple-500: #a855f7;
-  --color-purple-600: #9333ea;
-  --color-purple-400: #c084fc;
-  --color-pink-400: #f472b6;
-  --color-green-400: #4ade80;
-  --color-green-500: #22c55e;
-  --color-emerald-400: #34d399;
-  --color-emerald-500: #10b981;
-  --color-red-400: #f87171;
-  --color-red-500: #ef4444;
-  --color-orange-500: #f97316;
-  --color-yellow-400: #facc15;
-  --color-yellow-500: #eab308;
-  --color-cyan-500: #06b6d4;
-  --color-violet-500: #8b5cf6;
-  --color-blue-500: #3b82f6;
+  /* ===== Zuko OS design language v1 — surfaces & ink ===== */
+  --color-cream: #f3efe6;        /* page ground */
+  --color-paper: #fcfaf4;        /* cards */
+  --color-paper-2: #f7f4ea;      /* inner wells on white */
+  --color-inset: #f1ecdf;        /* inset wells on paper */
+  --color-ink: #17150f;          /* headlines, CTAs */
+  --color-panel: #1b1913;        /* the one dark anchor panel per page */
+  --color-panel-2: #262319;      /* card on dark panel */
+  --color-panel-border: #38342a;
+  --color-panel-border-2: #45402f;
+  --color-body: #57513f;         /* body text */
+  --color-muted: #6f6857;        /* secondary text */
+  --color-faint: #b0a88f;        /* tertiary text */
+  --color-hairline: #e3dccb;     /* section rules */
+  --color-card-border: #e6dfcf;  /* card borders */
+  --color-hairline-2: #ece5d4;   /* inner hairlines */
+  --color-skeleton: #ede7d8;
+  --color-cream-text: #f7f3ea;   /* text on ink */
+  --color-panel-text: #e9e4d5;   /* text on dark panel */
+  --color-panel-muted: #b8b09a;
+
+  /* ===== Accents (sampled from the logo) ===== */
+  --color-teal: #00c0a4;         /* fills, markers, dots */
+  --color-teal-deep: #067a67;    /* teal text & icons */
+  --color-teal-tint: #ddf2eb;
+  --color-brand-red: #f8082f;    /* fills, dots */
+  --color-red-deep: #c60a2a;     /* eyebrows, alerts */
+  --color-red-tint: #fbe3e4;
+  --color-brand-blue: #0078f8;   /* fills, icons */
+  --color-blue-deep: #0668cc;    /* blue text */
+  --color-blue-tint: #dfeafb;
+  --color-petrol: #005078;
+  --color-petrol-tint: #dce8ee;
+
+  /* ===== Type ===== */
+  --font-sans: var(--font-instrument), 'Helvetica Neue', Arial, sans-serif;
+  --font-display: var(--font-archivo), 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-  background-color: #020617;
-  color: #ffffff;
+  background-color: #f3efe6;
+  color: #17150f;
   overflow-x: hidden;
+}
+
+/* =====================
+   Marker underline — the brand brush stroke under one key phrase
+   per section (background-image, so no extra DOM).
+   ===================== */
+
+.marker,
+.marker-red {
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 96% 0.16em;
+  padding-bottom: 0.16em;
+}
+.marker {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'%3E%3Cpath d='M4 10 C 80 3, 220 2, 296 8' stroke='%2300c0a4' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.marker-red {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'%3E%3Cpath d='M4 10 C 80 3, 220 2, 296 8' stroke='%23c60a2a' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
 }
 
 /* =====================
@@ -93,21 +120,95 @@ body {
 }
 
 /* =====================
+   Calm snippet loops — each animation finishes its story early,
+   holds still for several seconds, then refreshes. Durations are
+   deliberately different per snippet so the page never pulses in
+   unison.
+   ===================== */
+
+@keyframes inb-new {
+  0%        { opacity: 0; transform: translateY(-10px); }
+  5%, 94%   { opacity: 1; transform: translateY(0); }
+  98%, 100% { opacity: 0; transform: translateY(-10px); }
+}
+
+@keyframes inb-strip {
+  0%, 10%   { opacity: 0; transform: translateY(6px); }
+  16%, 94%  { opacity: 1; transform: translateY(0); }
+  98%, 100% { opacity: 0; transform: translateY(6px); }
+}
+
+@keyframes pop-in {
+  0%, 3%    { opacity: 0; transform: scale(0.92); }
+  9%, 94%   { opacity: 1; transform: scale(1); }
+  98%, 100% { opacity: 0; transform: scale(0.92); }
+}
+
+@keyframes rise-in {
+  0%, 18%   { opacity: 0; transform: translateY(8px); }
+  26%, 94%  { opacity: 1; transform: translateY(0); }
+  98%, 100% { opacity: 0; transform: translateY(8px); }
+}
+
+@keyframes grow-seg {
+  0%, 2%    { transform: scaleX(0); opacity: 0; }
+  4%        { opacity: 1; }
+  12%, 96%  { transform: scaleX(1); opacity: 1; }
+  100%      { transform: scaleX(1); opacity: 0; }
+}
+
+@keyframes soft-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+@keyframes type-q {
+  0%, 2%    { max-width: 0; }
+  14%, 100% { max-width: 100%; }
+}
+
+@keyframes caret-blink {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Utility classes for the loops (stilled under reduced motion) */
+.anim-inb-new    { animation: inb-new 11s ease infinite backwards; }
+.anim-inb-strip  { animation: inb-strip 11s ease infinite backwards; }
+.anim-pop-in     { animation: pop-in 12s ease infinite backwards; }
+.anim-rise-in    { animation: rise-in 13s ease infinite backwards; }
+.anim-grow-seg   { transform-origin: left; animation: grow-seg 13s ease infinite; }
+.anim-soft-pulse { animation: soft-pulse 3.5s ease-in-out infinite; }
+.anim-type-q     { display: inline-block; overflow: hidden; white-space: nowrap; max-width: 0; animation: type-q 18s steps(30, end) infinite; }
+.anim-caret      { animation: caret-blink 1.1s linear infinite; }
+
+/* Loops hold at their first frame until the scroll-reveal parent is shown,
+   so the story always plays from the start when the snippet enters view. */
+.scroll-reveal:not(.is-visible):not(.animated) :is(.anim-inb-new, .anim-inb-strip, .anim-pop-in, .anim-rise-in, .anim-grow-seg, .anim-type-q) {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-inb-new, .anim-inb-strip, .anim-pop-in, .anim-rise-in,
+  .anim-grow-seg, .anim-soft-pulse, .anim-caret, .animate-pulse {
+    animation: none !important;
+  }
+  .anim-type-q { animation: none !important; max-width: 100%; }
+}
+
+/* =====================
    Scroll-reveal system
    ===================== */
 
-/* Hidden until the AnimationObserver adds .is-visible */
-.scroll-reveal { opacity: 0; }
-
-/* Per-direction initial offset */
-.scroll-reveal.from-up    { transform: translateY(30px); }
-.scroll-reveal.from-left  { transform: translateX(-30px); }
-.scroll-reveal.from-right { transform: translateX(30px); }
-.scroll-reveal.from-scale { transform: scale(0.95); }
+/* Content is ALWAYS visible by default — the reveal is a progressive
+   enhancement. If the observer never fires (slow hydration, JS off),
+   nothing on the page can end up hidden. The entrance offsets live only
+   inside the keyframes, applied for the 600ms the animation runs. */
+.scroll-reveal { opacity: 1; }
 
 /* Animation plays when .is-visible is added */
 .scroll-reveal.is-visible {
-  animation-duration: 600ms;
+  animation-duration: 300ms;
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   animation-name: fade-in;

@@ -6,44 +6,47 @@ export default function Security() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="scroll-reveal from-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm mb-6">
-              <Lock className="w-4 h-4" />
-              <span>Security by design</span>
+            <div className="inline-flex items-center gap-2 text-teal-deep mb-6">
+              <Lock className="w-3.5 h-3.5" />
+              <span className="text-xs font-bold tracking-[0.18em] uppercase">Security by design</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Your data stays yours.<span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Always.</span>
+            <h2 className="font-display font-black text-4xl md:text-5xl tracking-[-0.03em] text-ink mb-6 leading-[1.08]">
+              Your data stays yours.<span className="block marker w-fit">Always.</span>
             </h2>
-            <p className="text-lg text-slate-400 mb-8">Every workspace is isolated with row-level security, enforced at the database itself. Your data is never used to train AI models.</p>
+            <p className="text-lg text-body mb-8">Every workspace is isolated with row-level security, enforced at the database itself. Your data is never used to train AI models.</p>
             <div className="space-y-4">
-              {[{ icon: Lock, text: "Private workspaces with strict isolation" }, { icon: Users, text: "Role-based access control" }, { icon: Shield, text: "Encrypted credentials & integrations" }, { icon: CheckCircle, text: "Audit trail for AI-drafted and user-approved actions" }].map((item, i) => (
+              {[{ icon: Lock, text: "Private workspaces with strict isolation" }, { icon: Users, text: "Role-based access control" }, { icon: Shield, text: "Encrypted credentials & mail/calendar connections" }, { icon: CheckCircle, text: "Audit trail for AI-drafted and user-approved actions" }].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center"><item.icon className="w-5 h-5 text-green-400" /></div>
-                  <span className="text-slate-300">{item.text}</span>
+                  <div className="w-10 h-10 rounded-[11px] bg-teal-tint flex items-center justify-center flex-shrink-0"><item.icon className="w-5 h-5 text-teal-deep" /></div>
+                  <span className="text-ink">{item.text}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="scroll-reveal from-right relative" style={{ animationDelay: '0.15s' }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-3xl blur-3xl" />
-            <div className="relative bg-slate-900/80 rounded-3xl p-8 border border-white/10 backdrop-blur-xl">
+          <div className="scroll-reveal from-right relative" style={{ animationDelay: '0.08s' }}>
+            <div className="relative bg-paper rounded-3xl p-8 border border-card-border shadow-[0_18px_44px_rgba(56,48,24,0.08)]">
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center"><Shield className="w-6 h-6 text-green-400" /></div>
+                  <div className="w-12 h-12 rounded-[13px] bg-teal-tint flex items-center justify-center"><Shield className="w-6 h-6 text-teal-deep" /></div>
                   <div>
-                    <div className="font-semibold text-white">Security Status</div>
-                    <div className="text-sm text-green-400">All systems secure</div>
+                    <div className="font-bold text-ink">Security Status</div>
+                    <div className="text-sm font-semibold text-teal-deep">All systems secure</div>
                   </div>
                 </div>
-                <div className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-medium">Active</div>
+                <div className="px-3 py-1 rounded-full bg-teal-tint text-teal-deep text-xs font-bold">Active</div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2.5">
                 {[{ label: "Workspace isolation", status: "Row-level security" }, { label: "Credential encryption", status: "AES-256-GCM" }, { label: "Encryption keys", status: "Rotation supported" }, { label: "Encryption in transit", status: "TLS" }].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-slate-800/50">
-                    <span className="text-slate-400">{item.label}</span>
-                    <span className="text-white font-medium">{item.status}</span>
+                  <div key={i} className="flex items-center justify-between px-4.5 py-4 rounded-xl bg-inset">
+                    <span className="text-muted text-sm">{item.label}</span>
+                    <span className="flex items-center gap-2 text-ink text-sm font-bold"><CheckCircle className="w-3.5 h-3.5 text-teal-deep" />{item.status}</span>
                   </div>
                 ))}
+              </div>
+              <div className="flex items-center gap-2 mt-4 pt-3.5 border-t border-hairline-2">
+                <span className="anim-soft-pulse w-2 h-2 rounded-full bg-teal" />
+                <span className="text-xs text-muted">Audit trail · 14:32 — invoice chaser approved by you</span>
               </div>
             </div>
           </div>

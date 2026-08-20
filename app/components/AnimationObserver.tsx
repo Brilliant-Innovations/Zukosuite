@@ -13,6 +13,8 @@ const SCROLL_ANIM_NAMES = new Set([
 
 export default function AnimationObserver() {
   useEffect(() => {
+    const seen = new WeakSet<Element>()
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,7 +29,7 @@ export default function AnimationObserver() {
             const ae = e as AnimationEvent
             // Ignore events bubbling up from child elements
             if (ae.target !== el) return
-            // Ignore unrelated animations (e.g. blob-pulse on a child)
+            // Ignore unrelated animations (e.g. snippet loops on a child)
             if (!SCROLL_ANIM_NAMES.has(ae.animationName)) return
             el.removeEventListener('animationend', onAnimEnd)
             el.classList.remove('is-visible', 'from-up', 'from-left', 'from-right', 'from-scale')
@@ -40,8 +42,24 @@ export default function AnimationObserver() {
       { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     )
 
-    document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
+    const observeAll = () => {
+      document.querySelectorAll('.scroll-reveal').forEach((el) => {
+        if (seen.has(el)) return
+        seen.add(el)
+        observer.observe(el)
+      })
+    }
+
+    // Observe what exists now, and pick up anything that mounts later
+    // (streamed/hydrated sections), so no element is ever left unobserved.
+    observeAll()
+    const mutations = new MutationObserver(observeAll)
+    mutations.observe(document.body, { childList: true, subtree: true })
+
+    return () => {
+      mutations.disconnect()
+      observer.disconnect()
+    }
   }, [])
 
   return null
